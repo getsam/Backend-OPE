@@ -1,19 +1,8 @@
 from flask import Flask, render_template, redirect, request, session, flash, url_for
-
+from model.models import Aluno, Usuario
 
 app = Flask(__name__)
 app.secret_key = 'sessao'  # Aqui definida uma chave para salvar a sessão do usuario
-class Aluno:
-    def __init__(self, nome, cpf, telefone): #atributos pra teste depois iremos incluir mais
-        self.__nome = nome #aqui o __ deixa o atributo privado
-        self.__cpf = cpf # sendo necessario getter e setter para buscar os atributos, se quiser pode tirar 
-        self.__telefone = telefone
-
-class Usuario:
-    def __init__(self, nome_user, senha, aluno):
-        self.__nome_user = nome_user
-        self.__senha = senha
-        self.__aluno = Aluno
 
 lista_alunos = []
 @app.route('/')
