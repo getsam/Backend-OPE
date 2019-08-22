@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, session, flash, url
 
 
 app = Flask(__name__)
-
+app.secret_key = 'sessao'  # Aqui definida uma chave para salvar a sessão do usuario
 class Aluno:
     def __init__(self, nome, cpf, telefone): #atributos pra teste depois iremos incluir mais
         self.__nome = nome #aqui o __ deixa o atributo privado
