@@ -23,7 +23,7 @@ lista.append(aluno)
 
 @app.route('/admin')
 def admin():
-    return render_template('lista.html', titulo='usuarios', usuarios=lista)  
+    return render_template('lista.html', titulo='Alunos', usuarios=lista)  
 
 @app.route('/')
 def index():
@@ -50,6 +50,7 @@ def login():
 
 @app.route('/auth', methods=['POST'])
 def autenticar():
+    pass
     
     
 
